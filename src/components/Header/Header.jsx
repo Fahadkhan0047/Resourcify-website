@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Logo from '../../assets/ResourcifyLogo.png';
 import Avatar from "../Avatar";
+import React, { useEffect, useState } from "react";
+import Logo from '../../assets/ResourcifyLogo.png';
+import Avatar from "../Avatar";
 import Notification from '../Header/Notification'
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
