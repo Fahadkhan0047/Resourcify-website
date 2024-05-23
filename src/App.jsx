@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header/Header'
 import '@radix-ui/themes/styles.css';
-import HeroSection from './components/HeroSection/HeroSection'
+import Home from './pages/Home'
 import Sidebar  from './components/SideBar/SideBar';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <>
       <Header/>
       <Sidebar/>
-      <HeroSection/>
+      <Home/>
 
     </>
   )

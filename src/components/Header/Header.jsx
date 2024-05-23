@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Logo from '../../assets/ResourcifyLogo.png'
 import Avatar  from "../Avatar";
+import Notification from '../Header/Notification'
 
 function Header() {
   const [state, setState] = useState(false);
@@ -93,7 +94,9 @@ function Header() {
           </ul>
 
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0"> 
+          <Notification/>
           <Avatar/>
+
 
             <a
               href="javascript:void(0)"
