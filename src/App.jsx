@@ -4,13 +4,14 @@ import '@radix-ui/themes/styles.css';
 import Home from './pages/Home'
 import Sidebar  from './components/SideBar/SideBar';
 import Popup from './components/Popup/Popup';
+import HeroSection from './components/HeroSection/HeroSection'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Popup />
+      {/* <Popup /> */}
       <Header/>
       <main className='pt-20'>
       <Sidebar/>
