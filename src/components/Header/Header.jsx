@@ -8,7 +8,6 @@ import Notification from '../Header/Notification'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
     { title: "Home", path: "/home" },
