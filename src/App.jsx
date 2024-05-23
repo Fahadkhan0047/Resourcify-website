@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React,{ useState } from 'react'
 import Header from './components/Header/Header'
 import '@radix-ui/themes/styles.css';
 import Home from './pages/Home'
