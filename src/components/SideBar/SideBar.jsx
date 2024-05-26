@@ -37,7 +37,7 @@ export default function SidebarWithSearch() {
   };
 
   return (
-    <Card className="left-0 fixed h-[calc(100vh-2rem)] w-full max-w-[18rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden md:block">
+    <Card className="left-0 top-16 fixed h-screen w-full max-w-[18rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden lg:block ">
       <div className="p-2">
         <Input
           icon={<MagnifyingGlassIcon className="h-5 w-5" />}

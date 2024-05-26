@@ -4,18 +4,26 @@ import "@radix-ui/themes/styles.css";
 import Home from "./pages/Home";
 import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
-
+import './App.css';
+import Popup from "./components/Popup/Popup";
 function App() {
-  const [count, setCount] = useState(0);
   return (
     <>
+      <div className="">
+        <Popup />
+      </div>
+
+
       <Header />
       <SideBar />
-      <main className="pt-20 w-full pl-0 md:pt-20 md:pl-72">
-        
+
+
+      <main className="pt-16 w-full pl-0 md:pt-16 lg:pl-72">
         <Home />
       </main>
-      <footer className="md:pl-72 pl-0">
+
+
+      <footer className="lg:pl-72 pl-0">
         <Footer />
       </footer>
     </>
