@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../assets/ResourcifyLogo.png";
-import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -40,7 +40,7 @@ const Footer = () => {
         </nav>
         <div className="flex h-8 items-center justify-center">
           <svg
-            className="w-auto h-4 mx-auto text-gray-300 lg:mx-0"
+            className="w-auto h-4 mx-auto text-gray-400 lg:mx-0"
             viewBox="0 0 172 16"
             fill="none"
             stroke="currentColor"
@@ -194,13 +194,13 @@ const Footer = () => {
         </div>
         <div className="flex justify-center space-x-6 my-5">
           <a href="#">
-            <FaLinkedin size={25} />
+            <FaLinkedinIn size={20} />
           </a>
           <a href="#">
-            <FaFacebook size={25} />
+            <FaFacebookF size={20} />
           </a>
           <a href="#">
-            <FaGithub size={25} />
+            <FaGithub size={20} />
           </a>
         </div>
         <div className="text-gray-600">
