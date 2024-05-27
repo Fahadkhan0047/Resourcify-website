@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Avatar from "../Avatar";
+import Avatar from "./Avatar";
 import Logo from '../../assets/ResourcifyLogo.png';
 import Notification from '../Header/Notification'
 

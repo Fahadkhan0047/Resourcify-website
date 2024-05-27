@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import "@radix-ui/themes/styles.css";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
-import './App.css';
 import Popup from "./components/Popup/Popup";
+import Authentication from "./components/Authentication/Authentication";
+import AuthPopup from "./components/Authentication/AuthPopup";
 function App() {
   return (
     <>
-      <Login />
+      <AuthPopup />
       <div className="">
         <Popup />
       </div>
-
 
       <Header />
       <SideBar />
