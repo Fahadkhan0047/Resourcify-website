@@ -37,14 +37,14 @@ export default function SidebarWithSearch() {
   };
 
   return (
-    <Card className="left-0 top-16 fixed h-screen w-full max-w-[18rem] p-4 shadow-inner shadow-gray-300 hidden lg:block ">
+    <Card className="left-0 top-16 fixed h-screen w-full max-w-[18rem] p-4 shadow-inner bg-[#34D399] shadow-gray-300 hidden lg:block ">
       <div className="p-2">
         <Input
           icon={<MagnifyingGlassIcon className="h-5 w-5" />}
           label="Search"
         />
       </div>
-      <List>
+      <List className="text-white">
         <Accordion
           open={open === 1}
           icon={

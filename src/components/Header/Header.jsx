@@ -28,7 +28,7 @@ function Header() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-2xl  md:text-sm ${isMenuOpen ? "shadow-lg rounded-xl border mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" : ""}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-2xl  md:text-sm ${isMenuOpen ? "shadow-lg rounded-xl border mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" : ""}`}>
       <div className="gap-x-14 items-center w-full mx-0 px-4 md:flex md:px-8">
         <div className="flex items-center justify-between py-5 md:block">
           <a href="/">
