@@ -8,3 +8,55 @@
     } */
   }
   
+  @keyframes bookmark {
+    50% {
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: 35px; /* var(--icon-circle-size) */
+      height: 35px;
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circles {
+    from {
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  .animate-circle {
+    animation: circle 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+  
+  .animate-circles {
+    animation: circles 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-delay: 0.3s;
+  }
+  

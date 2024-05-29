@@ -1,5 +1,4 @@
 import React from 'react';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import { Avatar, Card } from 'antd';
 const { Meta } = Card;
 const CustomCard = ({ image, title, description, avatar, actions }) => (
@@ -10,19 +9,14 @@ const CustomCard = ({ image, title, description, avatar, actions }) => (
     cover={
       <img
         alt="example"
-        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+        src={image}
       />
     }
-    actions={[
-      <SettingOutlined key="setting" />,
-      <EditOutlined key="edit" />,
-      <EllipsisOutlined key="ellipsis" />,
-    ]}
+    actions={actions}
   >
     <Meta
-      avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
-      title="Card title"
-      description="This is the description"
+      title={title}
+      description={description}
     />
   </Card>
 );
