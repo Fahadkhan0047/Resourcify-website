@@ -34,7 +34,7 @@ function Header() {
 
   return (
     <nav
-      className={`fixed text-white top-0 left-0 right-0 z-50 shadow-inner bg-[#83c5be] shadow-[#99e5dd] md:text-sm ${
+      className={`fixed text-[#3ad09e] top-0 left-0 right-0 z-50 shadow-md bg-white shadow-white md:text-sm ${
         isMenuOpen
           ? "shadow-lg rounded-xl border mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
           : ""
@@ -93,9 +93,9 @@ function Header() {
             isMenuOpen ? "block" : "hidden"
           } menu-content`}
         >
-          <ul className="justify-end items-center font-semibold md:text-base uppercase text-white space-y-6 md:flex md:space-x-6 md:space-y-0">
+          <ul className="justify-end items-center pr-16 gap-4 font-medium md:text-base text-blue-gray-500 space-y-6 md:flex md:space-x-6 md:space-y-0">
             {navigation.map((item, idx) => (
-              <li key={idx} className="hover:text-[#006d77] duration-300">
+              <li key={idx} className="hover:text-[#3ad09e] duration-300">
                 <a href={item.path} className="block">
                   {item.title}
                 </a>
@@ -104,7 +104,7 @@ function Header() {
           </ul>
 
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-          <IoNotificationsSharp className="text-[#006d77]" size={25}/>
+          <IoNotificationsSharp className="text-[#3ad09e]" size={25}/>
             <Avatar/>
             <a
               href="/login"
@@ -113,7 +113,7 @@ function Header() {
               Log in
             </a>
             <button
-              class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-white text-[#006d77]  shadow-inner shadow-[#007c87] shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+              class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-[#3ad09e] text-[#ffffff]  shadow-inner shadow-[#007c87] shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
               type="button"
             >
               Sign Up
