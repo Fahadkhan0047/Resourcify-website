@@ -8,6 +8,8 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import HeroSectionMain from "../components/HeroSection/HeroSectionMain";
 import CustomCard from "../components/Card/CustomCard";
 import Bookmark from "../components/Bookmark";
+import Jobs from '../components/Jobs/Jobs'
+import CallToAction from "../components/CallToAction";
 
 function Home() {
   const cardData = [
@@ -108,6 +110,13 @@ function Home() {
 
         </div>
       </div>
+      <div className="mx-10 pt-16">
+        <h1 className="text-2xl uppercase font-bold text-gray-900 sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
+        Jobs/Internships
+        </h1>
+        </div>
+        <Jobs/>
+        <CallToAction/>
     </>
   );
 }
