@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
 import Authentication from "./components/Authentication/Authentication";
 import AuthPopup from "./components/Authentication/AuthPopup";
-import SignUp from "./pages/SignUp";
+import SignUpForm from "./pages/SignUpForm";
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
       <main className="pt-16 w-full pl-0 md:pt-16 lg:pl-72 bg-[#edf6f9]">
       <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signup" element={<SignUpForm />} />
       </Routes>
       </main>
 
