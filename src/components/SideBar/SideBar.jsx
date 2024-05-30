@@ -45,7 +45,7 @@ export default function SidebarWithSearch() {
           icon={
             <ChevronDownIcon
               strokeWidth={2.5}
-              className={`mx-auto h-4 w-4 text-[#3ad09e] transition-transform ${
+              className={`mx-auto h-4 w-4 text-[#14cbe3] transition-transform ${
                 open === 1 ? "rotate-180" : ""
               }`}
             />
@@ -57,7 +57,7 @@ export default function SidebarWithSearch() {
               className="border-b-0 p-3"
             >
               <ListItemPrefix>
-                <MdDashboard className="h-5 text-[#3ad09e] w-5" />
+                <MdDashboard className="h-5 text-[#14cbe3] w-5" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 Dashboard
@@ -68,19 +68,19 @@ export default function SidebarWithSearch() {
             <List className="p-0">
               <ListItem>
                 <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#3ad09e]" />
+                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#14cbe3]" />
                 </ListItemPrefix>
                 Analytics
               </ListItem>
               <ListItem>
                 <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#3ad09e]" />
+                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#14cbe3]" />
                 </ListItemPrefix>
                 Reporting
               </ListItem>
               <ListItem>
                 <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#3ad09e]" />
+                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#14cbe3]" />
                 </ListItemPrefix>
                 Projects
               </ListItem>
@@ -90,7 +90,7 @@ export default function SidebarWithSearch() {
         <hr className="my-2 border-blue-gray-50" />
         <ListItem>
           <ListItemPrefix>
-            <FaMessage className="h-5 w-5 text-[#3ad09e]" />
+            <FaMessage className="h-5 w-5 text-[#14cbe3]" />
           </ListItemPrefix>
           Messages
           <ListItemSuffix>
@@ -98,20 +98,20 @@ export default function SidebarWithSearch() {
               value="14"
               size="sm"
               variant="ghost"
-              color="green"
+              color="blue"
               className="rounded-full"
             />
           </ListItemSuffix>
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <CgProfile className="h-6 w-6 text-[#3ad09e]" />
+            <CgProfile className="h-6 w-6 text-[#14cbe3]" />
           </ListItemPrefix>
           Profile
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <FiLogOut className="h-5 w-5 text-[#3ad09e]" />
+            <FiLogOut className="h-5 w-5 text-[#14cbe3]" />
           </ListItemPrefix>
           Log Out
         </ListItem>

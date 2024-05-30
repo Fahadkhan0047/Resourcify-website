@@ -7,6 +7,9 @@ import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
 import Authentication from "./components/Authentication/Authentication";
 import AuthPopup from "./components/Authentication/AuthPopup";
+import SignUp from "./pages/SignUp";
+import { Route, Routes } from 'react-router-dom';
+
 function App() {
   return (
     <>
@@ -20,7 +23,10 @@ function App() {
       </nav>
 
       <main className="pt-16 w-full pl-0 md:pt-16 lg:pl-72 bg-[#edf6f9]">
-        <Home />
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/signup" element={<SignUp />} />
+      </Routes>
       </main>
 
 
@@ -32,3 +38,8 @@ function App() {
 }
 
 export default App;
+
+
+
+      
+    

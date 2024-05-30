@@ -89,13 +89,8 @@ function Home() {
       <HeroSectionMain />
 
       <div className="mx-10 pt-16">
-<<<<<<< HEAD
-        <h1 className="text-2xl pb-8 font-bold text-gray-900 sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
-          TOP CATEGORIES
-=======
         <h1 className="text-2xl font-bold text-gray-900 half-underline sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
           Top Categories
->>>>>>> 151dc90dbce044d2a425e4c5dae6efca50b94a58
         </h1>
         <Swiper
           modules={[Pagination]}
