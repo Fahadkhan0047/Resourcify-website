@@ -20,7 +20,7 @@ const ConnectApps = () => {
   return (
     <div className="p-8">
       <div className="mb-4">
-        <p className="text-gray-600 pb-8 ml-2">Get the latest jobs and internship listing here.</p>
+        <p className="text-gray-600 pb-8 ml-2">Discover the most recent job and internship opportunities available here.</p>
       </div>
       <div className="bg-white shadow-md rounded-md">
         {apps.map((app, index) => (
