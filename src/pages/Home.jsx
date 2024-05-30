@@ -185,7 +185,7 @@ function Home() {
         <h1 className="text-2xl font-bold text-gray-900 half-underline sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
         Free Resources
         </h1>
-        <div className="grid grid-cols-1  lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2  gap-2 mx-10 pt-10">
+        <div className="grid grid-cols-1  lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2  gap-2 pt-10">
         {cardData.map((card, index) => (
         <CustomCard
           key={index}
