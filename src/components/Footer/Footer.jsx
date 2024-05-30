@@ -4,9 +4,10 @@ import { FaLinkedinIn, FaGithub, FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-center py-10 items-center ">
-      <div className="container mx-auto ">
+    <footer className="bg-white text-center border-2 border-l-gray-50 py-10 items-center ">
+      <div className="container mx-auto">
         <div className="flex justify-center h-20" >
+        {/* <span className="text-[#3ad09e] font-extrabold mt-7 ml-20 relative">/</span> */}
           <img src={Logo} className="invert scale-45"></img>
         </div>
         <nav className="mb-5">
@@ -204,7 +205,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="text-gray-600">
-          © Copyright 2024, All Rights Reserved
+          By Nashedi Gangs of Jamshedpur
         </div>
       </div>
     </footer>

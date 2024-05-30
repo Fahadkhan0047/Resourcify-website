@@ -13,18 +13,13 @@ import {
   Alert,
   Input,
 } from "@material-tailwind/react";
-import {
-  PresentationChartBarIcon,
-  ShoppingBagIcon,
-  UserCircleIcon,
-  Cog6ToothIcon,
-  InboxIcon,
-  PowerIcon,
-} from "@heroicons/react/24/solid";
+import {FaMessage} from "react-icons/fa6";
+import { FiLogOut } from "react-icons/fi";
+import { CgProfile } from "react-icons/cg";
+import { MdDashboard,} from "react-icons/md";
 import {
   ChevronRightIcon,
   ChevronDownIcon,
-  CubeTransparentIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
 
@@ -50,7 +45,7 @@ export default function SidebarWithSearch() {
           icon={
             <ChevronDownIcon
               strokeWidth={2.5}
-              className={`mx-auto h-4 w-4 transition-transform ${
+              className={`mx-auto h-4 w-4 text-[#3ad09e] transition-transform ${
                 open === 1 ? "rotate-180" : ""
               }`}
             />
@@ -62,7 +57,7 @@ export default function SidebarWithSearch() {
               className="border-b-0 p-3"
             >
               <ListItemPrefix>
-                <PresentationChartBarIcon className="h-5 w-5" />
+                <MdDashboard className="h-5 text-[#3ad09e] w-5" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 Dashboard
@@ -73,62 +68,21 @@ export default function SidebarWithSearch() {
             <List className="p-0">
               <ListItem>
                 <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#3ad09e]" />
                 </ListItemPrefix>
                 Analytics
               </ListItem>
               <ListItem>
                 <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#3ad09e]" />
                 </ListItemPrefix>
                 Reporting
               </ListItem>
               <ListItem>
                 <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5 text-[#3ad09e]" />
                 </ListItemPrefix>
                 Projects
-              </ListItem>
-            </List>
-          </AccordionBody>
-        </Accordion>
-        <Accordion
-          open={open === 2}
-          icon={
-            <ChevronDownIcon
-              strokeWidth={2.5}
-              className={`mx-auto h-4 w-4 transition-transform ${
-                open === 2 ? "rotate-180" : ""
-              }`}
-            />
-          }
-        >
-          <ListItem className="p-0" selected={open === 2}>
-            <AccordionHeader
-              onClick={() => handleOpen(2)}
-              className="border-b-0 p-3"
-            >
-              <ListItemPrefix>
-                <ShoppingBagIcon className="h-5 w-5" />
-              </ListItemPrefix>
-              <Typography color="blue-gray" className="mr-auto font-normal">
-                E-Commerce
-              </Typography>
-            </AccordionHeader>
-          </ListItem>
-          <AccordionBody className="py-1">
-            <List className="p-0">
-              <ListItem>
-                <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
-                </ListItemPrefix>
-                Orders
-              </ListItem>
-              <ListItem>
-                <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
-                </ListItemPrefix>
-                Products
               </ListItem>
             </List>
           </AccordionBody>
@@ -136,34 +90,28 @@ export default function SidebarWithSearch() {
         <hr className="my-2 border-blue-gray-50" />
         <ListItem>
           <ListItemPrefix>
-            <InboxIcon className="h-5 w-5" />
+            <FaMessage className="h-5 w-5 text-[#3ad09e]" />
           </ListItemPrefix>
-          Inbox
+          Messages
           <ListItemSuffix>
             <Chip
               value="14"
               size="sm"
               variant="ghost"
-              color="blue-gray"
+              color="green"
               className="rounded-full"
             />
           </ListItemSuffix>
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <UserCircleIcon className="h-5 w-5" />
+            <CgProfile className="h-6 w-6 text-[#3ad09e]" />
           </ListItemPrefix>
           Profile
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <Cog6ToothIcon className="h-5 w-5" />
-          </ListItemPrefix>
-          Settings
-        </ListItem>
-        <ListItem>
-          <ListItemPrefix>
-            <PowerIcon className="h-5 w-5" />
+            <FiLogOut className="h-5 w-5 text-[#3ad09e]" />
           </ListItemPrefix>
           Log Out
         </ListItem>

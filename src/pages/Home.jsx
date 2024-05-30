@@ -8,6 +8,8 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import HeroSectionMain from "../components/HeroSection/HeroSectionMain";
 import CustomCard from "../components/Card/CustomCard";
 import Bookmark from "../components/Bookmark";
+import Jobs from '../components/Jobs/Jobs'
+import CallToAction from "../components/CallToAction";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -87,8 +89,13 @@ function Home() {
       <HeroSectionMain />
 
       <div className="mx-10 pt-16">
+<<<<<<< HEAD
         <h1 className="text-2xl pb-8 font-bold text-gray-900 sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
           TOP CATEGORIES
+=======
+        <h1 className="text-2xl font-bold text-gray-900 half-underline sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
+          Top Categories
+>>>>>>> 151dc90dbce044d2a425e4c5dae6efca50b94a58
         </h1>
         <Swiper
           modules={[Pagination]}
@@ -180,8 +187,8 @@ function Home() {
       </div>
 
       <div className="mx-10 pt-16">
-        <h1 className="text-2xl uppercase font-bold text-gray-900 sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
-        Free resources
+        <h1 className="text-2xl font-bold text-gray-900 half-underline sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
+        Free Resources
         </h1>
         <div className="grid grid-cols-1  lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2  gap-2 mx-10 pt-10">
         {cardData.map((card, index) => (
@@ -200,6 +207,13 @@ function Home() {
 
         </div>
       </div>
+      <div className="mx-10 pt-16">
+        <h1 className="text-2xl  font-bold text-gray-900 half-underline sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
+        Jobs and Internships
+        </h1>
+        </div>
+        <Jobs/>
+        <CallToAction/>
     </>
   );
 }
