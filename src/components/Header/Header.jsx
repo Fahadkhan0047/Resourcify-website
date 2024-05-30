@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Avatar from "./Avatar";
 import Logo from "../../assets/ResourcifyLogo.png";
 import Notification from "../Header/Notification";
+import { IoNotificationsSharp } from "react-icons/io5";
+
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,14 +34,14 @@ function Header() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-2xl  md:text-sm ${
+      className={`fixed text-white top-0 left-0 right-0 z-50 shadow-inner bg-[#83c5be] shadow-[#99e5dd] md:text-sm ${
         isMenuOpen
           ? "shadow-lg rounded-xl border mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
           : ""
       }`}
     >
       <div className="gap-x-14 items-center w-full mx-0 px-4 md:flex md:px-8">
-        <div className="flex items-center justify-between py-5 md:block">
+        <div className="flex-1 items-center justify-between py-5 md:block">
           <a href="/">
             <img
               className="invert scale-125"
@@ -51,7 +53,7 @@ function Header() {
           </a>
           <div className="md:hidden">
             <button
-              className="menu-btn text-gray-500 hover:text-gray-800"
+              className="menu-btn  hover:text-gray-800"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -87,13 +89,13 @@ function Header() {
           </div>
         </div>
         <div
-          className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
+          className={`flex justify-end pr-4 items-center mt-8 md:mt-0 md:flex ${
             isMenuOpen ? "block" : "hidden"
           } menu-content`}
         >
-          <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+          <ul className="justify-end items-center font-semibold md:text-base uppercase text-white space-y-6 md:flex md:space-x-6 md:space-y-0">
             {navigation.map((item, idx) => (
-              <li key={idx} className="text-gray-700 hover:text-gray-900">
+              <li key={idx} className="hover:text-[#006d77] duration-300">
                 <a href={item.path} className="block">
                   {item.title}
                 </a>
@@ -102,19 +104,19 @@ function Header() {
           </ul>
 
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <Notification />
-            <Avatar />
+          <IoNotificationsSharp className="text-[#006d77]" size={25}/>
+            <Avatar/>
             <a
               href="/login"
-              className="block text-gray-700 hover:text-gray-900"
+              className="block"
             >
               Log in
             </a>
             <button
-              class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-[#10B981] text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+              class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-white text-[#006d77]  shadow-inner shadow-[#007c87] shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
               type="button"
             >
-              Sign in
+              Sign Up
             </button>
           </div>
         </div>

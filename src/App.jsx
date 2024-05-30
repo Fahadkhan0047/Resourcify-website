@@ -10,16 +10,16 @@ import AuthPopup from "./components/Authentication/AuthPopup";
 function App() {
   return (
     <>
-      <AuthPopup />
       <div className="">
         <Popup />
       </div>
 
-      <Header />
-      <SideBar />
+      <nav className="bg-[#83c5be]">
+        <Header />
+        <SideBar />
+      </nav>
 
-
-      <main className="pt-16 w-full pl-0 md:pt-16 lg:pl-72">
+      <main className="pt-16 w-full pl-0 md:pt-16 lg:pl-72 bg-[#edf6f9]">
         <Home />
       </main>
 

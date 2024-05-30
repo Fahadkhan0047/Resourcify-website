@@ -19,7 +19,7 @@ const HeroSectionMain = () => {
 
   return (
     <section>
-      <div className="relative py-12 overflow-hidden bg-gray-100 sm:py-16 lg:py-20 xl:py-18">
+      <div className="relative py-12 overflow-hidden bg-[#edf6f9] sm:py-16 lg:py-20 xl:py-18">
         <div className="px-4 sm:px-6 lg:px-10 max-w-screen">
           <div className="flex flex-col justify-center">
             <div className="max-w-sm text-center xl:max-w-screen lg:mx-0 lg:text-left md:text-center">
