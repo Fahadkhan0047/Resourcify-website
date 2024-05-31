@@ -9,7 +9,7 @@ import Authentication from "./components/Authentication/Authentication";
 import AuthPopup from "./components/Authentication/AuthPopup";
 import SignUpForm from "./pages/SignUpForm";
 import { Route, Routes } from 'react-router-dom';
-
+import YourProfile from "./pages/YourProfile";
 function App() {
   return (
     <>
@@ -26,6 +26,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/signup" element={<SignUpForm />} />
+      <Route path="/YourProfile" element={<YourProfile />} />
       </Routes>
       </main>
 
@@ -36,6 +37,7 @@ function App() {
     </>
   );
 }
+
 
 export default App;
 
