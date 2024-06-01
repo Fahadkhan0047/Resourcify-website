@@ -1,27 +1,26 @@
-import React from 'react'
-import Avatar from "../components/Header/Avatar";
-
+import React from "react";
+import logo from "../assets/yt-thumbnails/ytthmb2.jpg";
+import CurvyContainer from "../components/CurvyContainer";
 
 const YourProfile = () => {
   return (
-    <div className='h-screen'>
-        <div className='mt-8 mx-8 h-40 p-2 flex rounded-md bg-white gray-300'>
-        <div style={{ height: '400px', width: '400' }}><Avatar /></div>
-            <div className='grid grid-row-3 gap-0 p-'>
-            <div><h1 className='pl-6 font-semibold text-2xl'>Miran Ahmad</h1></div>
-            <div><h1 className='pl-6 font-semibold text-2xl'>Miran Ahmad</h1></div>
-            <div><h1 className='pl-6 font-semibold text-2xl'>Miran Ahmad</h1></div>
+    <div className="h-screen">
+      <div className="mt-8 mx-8 h-[865px] p-0 flex rounded-2xl bg-white gray-300">
+        <div className="bg-blue-gray-300  h-44 w-full rounded-t-2xl grid grid-row-3 gap-0 p-">
+          <div>
+            <CurvyContainer />
+            <div className="bg-blue-gray-300  h-28 w-28 rounded-full absolute top-52 left-96 ">
+              <img
+                src={logo}
+                alt=""
+                className="bg-blue-gray-300 h-24 w-24 rounded-full object-cover relative top-2 left-2 "
+              />
             </div>
+          </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 '>
-        <div className='my-8 ml-8 h-40 rounded-md bg-white gray-300'></div>
-        <div className='my-8 mr-8 h-40 rounded-md bg-white gray-300'></div>
-        </div>
-        <div className='mx-8 h-40 rounded-md bg-white gray-300'></div>
-        <div></div>
-        <div></div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default YourProfile
+export default YourProfile;
