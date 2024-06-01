@@ -127,7 +127,7 @@ export default function UnderlineTabs() {
         className="rounded-none border-b border-blue-gray-50 bg-transparent p-0"
         indicatorProps={{
           className:
-            "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
+            "bg-transparent border-b-2 border-[#14cbe3] shadow-none rounded-none",
         }}
       >
         {data.map(({ label, value }) => (
