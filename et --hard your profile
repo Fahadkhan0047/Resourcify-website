@@ -1,0 +1,178 @@
+[33mcommit 9cc2a97f5d44bbe91d0a46c614a864b5dbc50a80[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: c430aca 310c171
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Sun Jun 2 03:01:00 2024 +0530
+
+    Merge branch 'main' of https://github.com/Fahadkhan0047/Resourcify-website
+
+[33mcommit c430aca8dd7d1b0664f241e5052242cc66725c51[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Sun Jun 2 03:00:57 2024 +0530
+
+    rollback to your profile
+
+[33mcommit 310c1719be2dbe042c4c29675626cde063813ebe[m
+Author: Miran <222miran222@gmail.com>
+Date:   Sun Jun 2 02:43:21 2024 +0530
+
+    svg
+
+[33mcommit 6507658ae4a4eaab811b648a5df75324c9577059[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Sun Jun 2 01:43:26 2024 +0530
+
+    branch
+
+[33mcommit a974a141d9d48a2f9dc1bc54ac5e8855ee26c08b[m
+Author: Miran <222miran222@gmail.com>
+Date:   Sat Jun 1 11:36:06 2024 +0530
+
+    curvy container
+
+[33mcommit d70b524d08a6cc7a0d8e987ce237023523a1aff8[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Sat Jun 1 05:05:51 2024 +0530
+
+    your profile
+
+[33mcommit e1737eb97d95134b59eb125ac59a3bbac1acfe18[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Fri May 31 04:09:22 2024 +0530
+
+    added signup page
+
+[33mcommit 7648e40f8a1a6b6b2b6679469f26fe925387bfc4[m
+Merge: 14dd469 6268a6a
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Fri May 31 02:32:40 2024 +0530
+
+    .
+
+[33mcommit 14dd469967d3dccee66208603217906af339a606[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Fri May 31 02:30:03 2024 +0530
+
+    .
+
+[33mcommit 6268a6a499448fb51c203309953e3bc4af2fc8cf[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Fri May 31 01:25:05 2024 +0530
+
+    /
+
+[33mcommit 7a53ae17f32782522e20342cd189432ee9fc7338[m
+Merge: e834aaa 151dc90
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Thu May 30 17:41:36 2024 +0530
+
+    Merge branch 'main' of https://github.com/Fahadkhan0047/Resourcify-website
+
+[33mcommit e834aaa882ad0ac950ddd6854ca2c7168e24b7dd[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Thu May 30 17:40:14 2024 +0530
+
+    added Swiper in categories
+
+[33mcommit 151dc90dbce044d2a425e4c5dae6efca50b94a58[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Thu May 30 15:01:06 2024 +0530
+
+    added beauty to the home page :)
+
+[33mcommit 369566f52e2e00bc7086fa51387b80fa4693fd8f[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Thu May 30 13:16:12 2024 +0530
+
+    added jobs section and calltoaction
+
+[33mcommit 422fc6ee0db05a225e3eb7b2ca481c75bea9d378[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Wed May 29 06:17:46 2024 +0530
+
+    added bookmark button and changed signin button
+
+[33mcommit 72f0f7ba19bd73b550d51c2b966948d1131d8e14[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Wed May 29 04:21:34 2024 +0530
+
+    added customcard component
+
+[33mcommit 2d336a277807ca0a6af11cd0b72c01e3652985a5[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Mon May 27 21:05:55 2024 +0530
+
+    added Authentication UI
+
+[33mcommit 983d469f81ec07aa4bc10c8988c337485a1db971[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Mon May 27 04:05:43 2024 +0530
+
+    added top categories
+
+[33mcommit 0ebc9c20781b9d9e67873c22d60fc8163b74aa33[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Sun May 26 21:25:11 2024 +0530
+
+    horizontal scroll and popup
+
+[33mcommit 94b1eab51acf2408672ae0adaf30cf73e3a739ea[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Sun May 26 04:16:24 2024 +0530
+
+    added footer component
+
+[33mcommit 97586d27e92490ae86582a8e6b41fe57ce691365[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Fri May 24 03:30:52 2024 +0530
+
+    resolved merge error
+
+[33mcommit ee79a90b9127f9fcdd8e511a4d4408d9e2d99f71[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Fri May 24 03:29:01 2024 +0530
+
+    .
+
+[33mcommit f4d1cb2b34dff043cc9f288f9ae79c2ab7bf5308[m
+Merge: e82564a a27f75d
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Fri May 24 03:28:53 2024 +0530
+
+    Merge branch 'main' of https://github.com/Fahadkhan0047/Resourcify-website
+
+[33mcommit e82564a1fb1d8ab7d2cc3fdab1011e9cae4b6125[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Fri May 24 03:20:47 2024 +0530
+
+    added main hero section
+
+[33mcommit a27f75d64eca2124c980ead98a11ddf6e43c28bd[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Thu May 23 17:32:02 2024 +0530
+
+    merged
+
+[33mcommit ef4164916693e76dafbce906a7bb44b4357be5f0[m
+Merge: 6c72714 182cee3
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Thu May 23 17:31:56 2024 +0530
+
+    Merge branch 'main' of https://github.com/Fahadkhan0047/Resourcify-website
+
+[33mcommit 182cee3057e98bbde6c8242a0c1727c56357c496[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Thu May 23 16:58:12 2024 +0530
+
+    structured the file structure and added heart-icon
+
+[33mcommit 6c727141ee167bacc110b3017966e275be359ede[m
+Author: Aquib Iqbal <aquibiqbal65@gmail.com>
+Date:   Thu May 23 16:57:35 2024 +0530
+
+    fixed navbar and sidebar
+
+[33mcommit edba541a60963f415ba06ec4ba70f41d5bfdc491[m
+Author: Fahadkhan0047 <kfahaduu@gmail.com>
+Date:   Thu May 23 15:57:53 2024 +0530
+
+    added profile avatar
