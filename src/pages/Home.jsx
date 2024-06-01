@@ -11,6 +11,8 @@ import Bookmark from "../components/Bookmark";
 import Jobs from '../components/Jobs/Jobs'
 import CallToAction from "../components/CallToAction";
 
+import Branch from '../components/Branch/Branch'
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
@@ -87,6 +89,7 @@ function Home() {
     <>
       {/* <HeroSection/> */}
       <HeroSectionMain />
+      <Branch />
 
       <div className="mx-10 pt-16">
         <h1 className="text-2xl font-bold text-gray-900 half-underline sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
