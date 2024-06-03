@@ -10,6 +10,7 @@ import AuthPopup from "./components/Authentication/AuthPopup";
 import SignUpForm from "./pages/SignUpForm";
 import { Route, Routes } from 'react-router-dom';
 import YourProfile from "./pages/YourProfile";
+import Roadmap from "./pages/Roadmap";
 function App() {
   return (
     <div className="font-sans">
@@ -27,6 +28,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/signup" element={<SignUpForm />} />
       <Route path="/YourProfile" element={<YourProfile />} />
+      <Route path="/roadmap" element={<Roadmap />} />
       </Routes>
       </main>
 

@@ -111,9 +111,9 @@ export default function SidebarWithSearch() {
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <FiLogOut className="h-5 w-5 text-[#14cbe3]" />
+            <FiLogOut className="h-5 w-5 text-red-500" />
           </ListItemPrefix>
-          Log Out
+          <span className="text-red-500">Log Out</span>
         </ListItem>
       </List>
     </Card>

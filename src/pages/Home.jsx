@@ -3,6 +3,8 @@ import ytthumb1 from "../assets/yt-thumbnails/ytthumb1.jpg";
 import ytthumb2 from "../assets/yt-thumbnails/ytthmb2.jpg";
 import ytthumb3 from "../assets/yt-thumbnails/ytthumb3.jpg";
 import ytthumb4 from "../assets/yt-thumbnails/ytthumb4.jpg";
+import catthumb1 from '../assets/categories/Web-Dev-thumbnail.jpg'
+import catthumb2 from '../assets/categories/AI-thumbnail.jpg'
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 // import HeroSection from '../components/HeroSection/HeroSection'
 import HeroSectionMain from "../components/HeroSection/HeroSectionMain";
@@ -106,19 +108,18 @@ function Home() {
 
           <SwiperSlide>
             <div>
-              {/* image */}
-              <div className="md:h-[328px] md:w-[368px] sm:h-[300px] sm:w-[340px] h-[280px] w-[320px] bg-gray-500 rounded-md"></div>
-
+              <img src={catthumb1} alt="" className="md:h-[328px] md:w-[368px] sm:h-[300px] sm:w-[340px] h-[280px] w-[320px] bg-gray-500 rounded-md"/>
+              
               {/* title */}
               <div>
-                <p>title lorem ipsum</p>
+                <p className="font-semibold">Web Development</p>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div>
               {/* image */}
-              <div className="md:h-[328px] md:w-[368px] sm:h-[300px] sm:w-[340px] h-[280px] w-[320px] bg-gray-500 rounded-md"></div>
+              <img src={catthumb2} alt="" className="md:h-[328px] md:w-[368px] sm:h-[300px] sm:w-[340px] h-[280px] w-[320px] bg-gray-500 rounded-md"/>
 
               {/* title */}
               <div>
