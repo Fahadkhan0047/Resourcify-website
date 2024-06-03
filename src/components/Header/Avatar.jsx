@@ -47,7 +47,7 @@ export default function AvatarDefault() {
               </Link>
             </div>
             <hr className="my-1" />
-            <div className="flex items-center gap-2 cursor-pointer active:scale-95 duration-300 hover:bg-gray-200 p-2 rounded-2xl">
+            <div className="flex items-center gap-2 cursor-pointer text-red-500 active:scale-95 duration-300 hover:bg-gray-200 p-2 rounded-2xl">
               <MdLogout size={25} />
               <button className="text-md" onClick={handleButtonClick}>
                 Logout
