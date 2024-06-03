@@ -12,7 +12,7 @@ import { Route, Routes } from 'react-router-dom';
 import YourProfile from "./pages/YourProfile";
 function App() {
   return (
-    <>
+    <div className="font-sans">
       <div className="">
         <Popup />
       </div>
@@ -34,7 +34,7 @@ function App() {
       <footer className="lg:pl-72 pl-0">
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

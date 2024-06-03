@@ -1,6 +1,5 @@
-"use client";
-
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom'; // Import useLocation from react-router-dom
 import { RiEyeCloseFill } from "react-icons/ri";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 import AuthPopup from '../Authentication/AuthPopup';
@@ -12,19 +11,23 @@ const Popup = () => {
     { text: "and" },
     { text: "Thrive" },
     { text: "with" },
-    { text: "Resourcify.", className: "text-[#006d77] dark:text-blue-500" },
+    { text: "Resourcify.", className: "text-[#14cbe3] dark:text-blue-500" },
   ];
 
   const [showPopup, setShowPopup] = useState(false);
   const [showAuthPopup, setShowAuthPopup] = useState(false);
+  const location = useLocation(); // Get the location object
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowPopup(true);
+      // Check if the current location is the home page
+      if (location.pathname === '/') {
+        setShowPopup(true);
+      }
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [location]); // Watch for changes in the location object
 
   const handleClosePopup = () => {
     setShowPopup(false);
