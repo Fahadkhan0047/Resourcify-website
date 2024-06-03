@@ -8,16 +8,13 @@ import Popup from "./components/Popup/Popup";
 import SignUpForm from "./pages/SignUpForm";
 import { Route, Routes, useLocation } from "react-router-dom";
 import YourProfile from "./pages/YourProfile";
-<<<<<<< HEAD
 import Roadmap from "./pages/Roadmap";
-=======
 import NotFound from "./pages/NotFound";
 
->>>>>>> f0aeb0ba34c79607f9ac9a4331d7194d3c13b987
 function App() {
   const location = useLocation();
 
-  const knownRoutes = ["/", "/signup", "/YourProfile"];
+  const knownRoutes = ["/", "/signup", "/YourProfile",'/roadmap'];
   const isNotFoundPage = !knownRoutes.includes(location.pathname);
 
   return (
@@ -33,21 +30,6 @@ function App() {
           </nav>
         </>
       )}
-
-<<<<<<< HEAD
-      <nav className="bg-[#83c5be]">
-        <Header />
-        <SideBar />
-      </nav>
-
-      <main className="pt-16 w-full pl-0 md:pt-16 lg:pl-72 bg-[#edf6f9]">
-      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<SignUpForm />} />
-      <Route path="/YourProfile" element={<YourProfile />} />
-      <Route path="/roadmap" element={<Roadmap />} />
-      </Routes>
-=======
       <main
         className={`pt-16 w-full ${
           !isNotFoundPage ? "pl-0 md:pt-16 lg:pl-72" : ""
@@ -58,8 +40,8 @@ function App() {
           <Route path="/signup" element={<SignUpForm />} />
           <Route path="/YourProfile" element={<YourProfile />} />
           <Route path="*" element={<NotFound />} /> {/* 404 page route */}
+          <Route path="/roadmap" element={<Roadmap />} />
         </Routes>
->>>>>>> f0aeb0ba34c79607f9ac9a4331d7194d3c13b987
       </main>
 
       {!isNotFoundPage && (
