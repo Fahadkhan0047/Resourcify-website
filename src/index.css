@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-    /* .btn-primary {
-        @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
-    } */
-  }
+  /* .btn-primary {
+    @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
   
   @keyframes bookmark {
     50% {
