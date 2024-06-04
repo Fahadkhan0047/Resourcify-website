@@ -1,58 +1,32 @@
-import React from "react";
+import React,{useState} from "react";
 import Header from "./components/Header/Header";
 import "@radix-ui/themes/styles.css";
 import Home from "./pages/Home";
 import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
-import Popup from "./components/Popup/Popup";
 import SignUpForm from "./pages/SignUpForm";
 import { Route, Routes, useLocation } from "react-router-dom";
 import YourProfile from "./pages/YourProfile";
 import Roadmap from "./pages/Roadmap";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-  const location = useLocation();
-
-  const knownRoutes = ["/", "/signup", "/YourProfile","/roadmap","aboutus"];
-  const isNotFoundPage = !knownRoutes.includes(location.pathname);
-
   return (
-    <div className="font-sans">
-      {!isNotFoundPage && (
-        <>
-          <div className="">
-            {/* <Popup /> */}
-          </div>
-          <nav className="bg-[#83c5be]">
-            <Header />
-            <SideBar />
-          </nav>
-        </>
-      )}
-      <main
-        className={`w-full ${
-          !isNotFoundPage ? "pl-0 md:pt-16 lg:pl-72" : ""
-        } bg-[#edf6f9]`}
-      >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUpForm />} />
-          <Route path="/YourProfile" element={<YourProfile />} />
-          <Route path="*" element={<NotFound />} /> {/* 404 page route */}
-          <Route path="/roadmap" element={<Roadmap />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-        </Routes>
-      </main>
-
-      {!isNotFoundPage && (
-        <footer className="lg:pl-72 pl-0">
-          <Footer />
-        </footer>
-      )}
-    </div>
-  );
+    <>
+    <Header/>
+    <Routes>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/roadmap" element={<Roadmap/>}/>
+        <Route path="/yourprofile" element={<YourProfile/>}/> 
+        <Route path="/aboutus" element={<AboutUs />}/>
+        <Route path="/signup" element={<SignUpForm />} />
+    </Routes>
+    <Footer/>
+    </>
+  )
 }
 
-export default App;
+export default App

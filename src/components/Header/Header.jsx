@@ -9,7 +9,7 @@ function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const navigation = [
-    { title: "Home", path: "/" },
+    { title: "Home", path: "/home" },
     { title: "Roadmap", path: "/roadmap" },
     { title: "Resources", path: "/resources" },
     { title: "About Us", path: "/aboutus" },
