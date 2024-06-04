@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../index.css'; // Import the custom CSS for animations
+import '../../index.css'; // Import the custom CSS for animations
 
 const Bookmark = () => {
   const [checked, setChecked] = useState(false);

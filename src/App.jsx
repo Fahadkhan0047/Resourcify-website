@@ -9,12 +9,13 @@ import SignUpForm from "./pages/SignUpForm";
 import { Route, Routes, useLocation } from "react-router-dom";
 import YourProfile from "./pages/YourProfile";
 import Roadmap from "./pages/Roadmap";
+import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 
 function App() {
   const location = useLocation();
 
-  const knownRoutes = ["/", "/signup", "/YourProfile",'/roadmap'];
+  const knownRoutes = ["/", "/signup", "/YourProfile","/roadmap","aboutus"];
   const isNotFoundPage = !knownRoutes.includes(location.pathname);
 
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/YourProfile" element={<YourProfile />} />
           <Route path="*" element={<NotFound />} /> {/* 404 page route */}
           <Route path="/roadmap" element={<Roadmap />} />
+          <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
       </main>
 
