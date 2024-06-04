@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 @layer components {
   /* .btn-primary {
@@ -8,75 +6,90 @@
   } */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-  
-  @keyframes bookmark {
-    50% {
-      transform: scaleY(0.6);
-    }
-  
-    100% {
-      transform: scaleY(1);
-    }
-  }
-  
-  @keyframes circle {
-    from {
-      width: 0;
-      height: 0;
-      opacity: 0;
-    }
-  
-    90% {
-      width: 35px; /* var(--icon-circle-size) */
-      height: 35px;
-      opacity: 1;
-    }
-  
-    to {
-      opacity: 0;
-    }
-  }
-  
-  @keyframes circles {
-    from {
-      transform: scale(0);
-    }
-  
-    40% {
-      opacity: 1;
-    }
-  
-    to {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-  }
-  
-  .animate-circle {
-    animation: circle 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  }
-  
-  .animate-circles {
-    animation: circles 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    animation-delay: 0.3s;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  width: 0px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  /* background: #83c5be; color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #14cbe3; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+@keyframes bookmark {
+  50% {
+    transform: scaleY(0.6);
   }
 
-  .half-underline {
-    position: relative;
-    display: inline-block;
+  100% {
+    transform: scaleY(1);
   }
-  .half-underline::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 39%;
-    height: 3px;
-    background-color: #14cbe3;
-    font-weight: 800;
+}
+
+@keyframes circle {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
-  
-  .curve-shape {
-    clip-path: path('M 0 0 Q 50 100 100 0 Z');
+
+  90% {
+    width: 35px; /* var(--icon-circle-size) */
+    height: 35px;
+    opacity: 1;
   }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes circles {
+  from {
+    transform: scale(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.animate-circle {
+  animation: circle 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-circles {
+  animation: circles 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: 0.3s;
+}
+
+.half-underline {
+  position: relative;
+  display: inline-block;
+}
+.half-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 39%;
+  height: 3px;
+  background-color: #14cbe3;
+  font-weight: 800;
+}
+
+.curve-shape {
+  clip-path: path("M 0 0 Q 50 100 100 0 Z");
+}

@@ -22,7 +22,7 @@ function App() {
       {!isNotFoundPage && (
         <>
           <div className="">
-            <Popup />
+            {/* <Popup /> */}
           </div>
           <nav className="bg-[#83c5be]">
             <Header />
@@ -31,7 +31,7 @@ function App() {
         </>
       )}
       <main
-        className={`pt-16 w-full ${
+        className={`w-full ${
           !isNotFoundPage ? "pl-0 md:pt-16 lg:pl-72" : ""
         } bg-[#edf6f9]`}
       >

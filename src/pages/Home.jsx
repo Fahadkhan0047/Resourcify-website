@@ -98,10 +98,8 @@ function Home() {
           Top Categories
         </h1>
         <Swiper
-          modules={[Pagination]}
           spaceBetween={50}
-          pagination={{ clickable: true }}
-          slidesPerView={4}
+          slidesPerView={1}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
