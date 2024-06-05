@@ -9,10 +9,10 @@ function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const navigation = [
-    { title: "Home", path: "/home" },
-    { title: "Roadmap", path: "/roadmap" },
-    { title: "Resources", path: "/resources" },
-    { title: "About Us", path: "/aboutus" },
+    { title: "Home", path: "/Home" },
+    { title: "Roadmap", path: "/Roadmap" },
+    { title: "Resources", path: "/Resources" },
+    { title: "About Us", path: "/AboutUs" },
   ];
 
   useEffect(() => {
@@ -143,7 +143,7 @@ function Header() {
               Log in
             </a>
             <button
-              className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-[#14cbe3] text-white  shadow-inner shadow-[#007c87] shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+              className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-[#14cbe3] text-white  shadow-inner shadow-[#007c87]  hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
               type="button"
             >
               Sign Up

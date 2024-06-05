@@ -29,7 +29,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-transparent ">
+    <div className="flex items-center justify-center min-h-screen bg-transparent">
       <VantaGlobe/>
       <button className="absolute top-0 right-0 m-4" onClick={handleCloseAuthPopup}>
         <RiEyeCloseFill className='hover:scale-125 duration-300' size={25} />

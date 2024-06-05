@@ -18,10 +18,10 @@ function App() {
     <Header/>
     <Routes>
         <Route path="/" element={<LandingPage/>}/>
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/roadmap" element={<Roadmap/>}/>
-        <Route path="/yourprofile" element={<YourProfile/>}/> 
-        <Route path="/aboutus" element={<AboutUs />}/>
+        <Route path="/Home" element={<Home/>}/>
+        <Route path="/Roadmap" element={<Roadmap/>}/>
+        <Route path="/YourProfile" element={<YourProfile/>}/> 
+        <Route path="/AboutUs" element={<AboutUs />}/>
         <Route path="/signup" element={<SignUpForm />} />
     </Routes>
     <Footer/>
