@@ -1,29 +1,63 @@
-import React from 'react';
-import icon1 from '../assets/companylogo/IBM.png';
-import icon2 from '../assets/companylogo/infosys.png';
-// ... import all your icons similarly
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom'; // Import useLocation from react-router-dom
+import { RiEyeCloseFill } from "react-icons/ri";
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
+import AuthPopup from '..//components/Authentication/AuthPopup';
+import Logo from '../assets/ResourcifyLogo.png';
+import VantaGlobe from '../components/Backgrounds/VantaGlobe';
+
 
 const LandingPage = () => {
+  const words = [
+    { text: "Learn, connect" },
+    { text: "Connect" },
+    { text: "and" },
+    { text: "Thrive" },
+    { text: "with" },
+    { text: "Resourcify.", className: "text-[#ffffff] drop-shadow-[0_3px_01px_rgba(1,1,1,1)]" },
+  ];
+
+  const [showAuthPopup, setShowAuthPopup] = useState(false);
+  const location = useLocation(); // Get the location object
+
+  const handleShowAuthPopup = () => {
+    setShowAuthPopup(true);
+  };
+
+  const handleCloseAuthPopup = () => {
+    setShowAuthPopup(false);
+  };
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white z-50">
-      <div className="relative">
-        <div className="absolute left-0 flex flex-col space-y-4">
-          <img src={icon1} alt="Icon 1" className="h-12 w-12" />
-          <img src={icon2} alt="Icon 2" className="h-12 w-12" />
-          {/* Add other icons similarly */}
-        </div>
-        <div className="text-center px-8 py-4">
-          <h1 className="text-3xl font-bold mb-4">Connect with 250+ Apps</h1>
-          <p className="text-lg text-gray-600">
-            With lots of unique blocks, you can easily build a page without coding. Build your next landing page.
-          </p>
-        </div>
-        <div className="absolute right-0 flex flex-col space-y-4">
-          <img src={icon1} alt="Icon 1" className="h-12 w-12" />
-          <img src={icon2} alt="Icon 2" className="h-12 w-12" />
-          {/* Add other icons similarly */}
+    <div className="flex items-center justify-center min-h-screen bg-transparent ">
+      <VantaGlobe/>
+      <button className="absolute top-0 right-0 m-4" onClick={handleCloseAuthPopup}>
+        <RiEyeCloseFill className='hover:scale-125 duration-300' size={25} />
+      </button>
+      <div className="flex flex-col items-center justify-center h-[40rem]">
+        {/* <img className="invert scale-50 mb-10"
+              src={Logo}
+              alt="Resourcify logo"/> */}
+        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base">
+          The road to freedom starts from here
+        </p>
+        <TypewriterEffectSmooth words={words} />
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+          <button
+            className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm"
+            onClick={handleShowAuthPopup}
+          >
+            LogIn
+          </button>
+          <button
+            className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm"
+            onClick={handleShowAuthPopup}
+          >
+            SignUp
+          </button>
         </div>
       </div>
+      <AuthPopup showPopup={showAuthPopup} handleClosePopup={handleCloseAuthPopup} />
     </div>
   );
 };
