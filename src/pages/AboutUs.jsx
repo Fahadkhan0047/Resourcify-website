@@ -1,10 +1,11 @@
 import React from 'react'
 import VantaNet from '../components/Backgrounds/VantaNet';
 import Fahad from '../assets/aboutus/Fahad.jpg';
+import Miran from '../assets/aboutus/Miran.jpg';
 
 const AboutUs = () => {
   return (
-    <div className='flex items-center justify-center min-h-screen bg-transparent font-sans'>
+    <div className='flex items-center justify-center min-h-screen bg-transparent font-sans w-full bg-[#edf6f9] pl-0 md:pt-16 lg:pl-72'>
       <VantaNet />
       <div className="flex flex-col items-center py-8">
         <h2 className="text-2xl font-bold mb-8 half-underline">About Us</h2>
@@ -14,11 +15,11 @@ const AboutUs = () => {
               <div className="sm:w-48 sm:h-64 w-40 h-56 flex items-end justify-center mb-4 bg-orange-500 rounded-tl-full shadow-lg text-white font-bold text-xl bg-cover" style={{backgroundImage: `url(${Fahad})` }}>
                 <h1>FAHAD KHAN</h1>
               </div>
-              <div className="sm:w-48 sm:h-64 w-40 h-56 flex items-start justify-center bg-orange-500 rounded-bl-full shadow-lg text-white font-bold text-xl" >
+              <div className="sm:w-48 sm:h-64 w-40 h-56 flex items-start justify-center bg-orange-500 rounded-bl-full shadow-lg text-white font-bold text-xl bg-cover" style={{backgroundImage: `url(${Miran})` }}>
                 AQUIB IQBAL
               </div>
             </div>
-            <div className="sm:w-48 sm:h-64 w-40 h-56 flex items-end justify-center ml-4 bg-orange-500 rounded-tr-full shadow-lg text-white font-bold text-xl">
+            <div className="sm:w-48 sm:h-64 w-40 h-56 flex items-end justify-center ml-4 bg-orange-500 rounded-tr-full shadow-lg text-white font-bold text-xl bg-cover" style={{backgroundImage: `url(${Miran})` }}>
               MIRAN AHMAD
             </div>
 

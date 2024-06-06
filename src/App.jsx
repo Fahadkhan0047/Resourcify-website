@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import "@radix-ui/themes/styles.css";
 import Home from "./pages/Home";
@@ -13,19 +13,22 @@ import NotFound from "./pages/NotFound";
 import LandingPage from "./pages/LandingPage";
 
 function App() {
+  const location = useLocation();
   return (
     <>
-    <Header/>
-    <Routes>
-        <Route path="/" element={<LandingPage/>}/>
-        <Route path="/Home" element={<Home/>}/>
-        <Route path="/Roadmap" element={<Roadmap/>}/>
-        <Route path="/YourProfile" element={<YourProfile/>}/> 
-        <Route path="/AboutUs" element={<AboutUs />}/>
+      <Header />
+      {location.pathname !== "/" && <SideBar />}
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Roadmap" element={<Roadmap />} />
+        <Route path="/YourProfile" element={<YourProfile />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/signup" element={<SignUpForm />} />
-    </Routes>
-    <Footer/>
+      </Routes>
+      <Footer />
     </>
+
   )
 }
 

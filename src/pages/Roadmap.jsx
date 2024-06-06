@@ -31,7 +31,7 @@ function Roadmap() {
     ]
     return (
 
-        <div className="min-h-screen overflow-hidden">
+        <div className="min-h-screen overflow-hidden w-full bg-[#edf6f9] pl-0 md:pt-16 lg:pl-72">
             <div className="mx-4 md:mx-8 mt-6">
                 <h1 className="text-2xl font-bold text-gray-900 half-underline sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
                     Roadmap

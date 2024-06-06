@@ -9,7 +9,7 @@ import VantaGlobe from '../components/Backgrounds/VantaGlobe';
 
 const LandingPage = () => {
   const words = [
-    { text: "Learn, connect" },
+    { text: "Learn," },
     { text: "Connect" },
     { text: "and" },
     { text: "Thrive" },
@@ -38,7 +38,7 @@ const LandingPage = () => {
         {/* <img className="invert scale-50 mb-10"
               src={Logo}
               alt="Resourcify logo"/> */}
-        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base">
+        <p className="text-neutral-600 font-semibold text-sm sm:text-base">
           The road to freedom starts from here
         </p>
         <TypewriterEffectSmooth words={words} />
