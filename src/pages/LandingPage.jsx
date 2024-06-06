@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom'; // Import useLocation from react-router-dom
+import { useNavigate, useLocation } from 'react-router-dom'; // Import useNavigate and useLocation from react-router-dom
 import { RiEyeCloseFill } from "react-icons/ri";
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
-import AuthPopup from '..//components/Authentication/AuthPopup';
 import Logo from '../assets/ResourcifyLogo.png';
 import VantaGlobe from '../components/Backgrounds/VantaGlobe';
-
+import Login from '../components/Authentication/Login';
 
 const LandingPage = () => {
   const words = [
@@ -17,27 +16,21 @@ const LandingPage = () => {
     { text: "Resourcify.", className: "text-[#ffffff] drop-shadow-[0_3px_01px_rgba(1,1,1,1)]" },
   ];
 
-  const [showAuthPopup, setShowAuthPopup] = useState(false);
   const location = useLocation(); // Get the location object
+  const navigate = useNavigate(); // Get the navigate function
 
-  const handleShowAuthPopup = () => {
-    setShowAuthPopup(true);
+  const handleLoginClick = () => {
+    navigate('/login'); // Navigate to the login page
   };
 
-  const handleCloseAuthPopup = () => {
-    setShowAuthPopup(false);
+  const handleSignUpClick = () => {
+    navigate('/signup'); // Navigate to the signup page
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-transparent">
       <VantaGlobe/>
-      <button className="absolute top-0 right-0 m-4" onClick={handleCloseAuthPopup}>
-        <RiEyeCloseFill className='hover:scale-125 duration-300' size={25} />
-      </button>
       <div className="flex flex-col items-center justify-center h-[40rem]">
-        {/* <img className="invert scale-50 mb-10"
-              src={Logo}
-              alt="Resourcify logo"/> */}
         <p className="text-neutral-600 font-semibold text-sm sm:text-base">
           The road to freedom starts from here
         </p>
@@ -45,19 +38,18 @@ const LandingPage = () => {
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
           <button
             className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm"
-            onClick={handleShowAuthPopup}
+            onClick={handleLoginClick} // Corrected onClick
           >
             LogIn
           </button>
           <button
             className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm"
-            onClick={handleShowAuthPopup}
+            onClick={handleSignUpClick} // Corrected onClick
           >
             SignUp
           </button>
         </div>
       </div>
-      <AuthPopup showPopup={showAuthPopup} handleClosePopup={handleCloseAuthPopup} />
     </div>
   );
 };
