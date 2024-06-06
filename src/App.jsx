@@ -11,6 +11,7 @@ import Roadmap from "./pages/Roadmap";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 import LandingPage from "./pages/LandingPage";
+import Resources from "./pages/Resources";
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/YourProfile" element={<YourProfile />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/Resources" element={<Resources />} />
       </Routes>
       <Footer />
     </>
