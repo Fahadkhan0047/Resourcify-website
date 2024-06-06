@@ -7,8 +7,8 @@ import Notification from "../Header/Notification";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isAuthenticated, setAuthenticated] = useState(false);
   const location = useLocation();
+  const [isAuthenticated, setAuthenticated] = useState(false)
 
 
   const navigation = [
@@ -57,15 +57,14 @@ function Header() {
           </div>
         </div>
         <div className={`flex-col md:flex-row md:flex items-center w-full md:justify-between ${isMenuOpen ? "top-16 p-8 bg-white h-72 w-full flex" : "hidden"} md:flex`}>
-          <ul className={`md:flex md:space-x-6 md:items-center text-black font-medium text-base space-y-6 md:space-y-0 md:ml-0 ml-4 ${isMenuOpen? "absolute left-0": ""}`}>
+          <ul className={`md:flex md:space-x-6 md:items-center text-black font-medium text-base space-y-6 md:space-y-0 md:ml-0 ml-4 ${isMenuOpen ? "absolute left-0" : ""}`}>
             {navigation.map((item, idx) => (
               item.title === "Resources" ? (
                 <li key={idx} className="relative group" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
                   <Link
                     to={item.path}
-                    className={`px-2 py-1 rounded transition-all duration-300 flex items-center hover:border-b-2 hover:border-gray-300 ${
-                      location.pathname === item.path ? 'border-b-2 border-[#14cbe3]' : ''
-                    }`}
+                    className={`px-2 py-1 rounded transition-all duration-300 flex items-center hover:border-b-2 hover:border-gray-300 ${location.pathname === item.path ? 'border-b-2 border-[#14cbe3]' : ''
+                      }`}
                   >
                     {item.title}
                     <svg className={`ml-2 h-4 w-4 transition-transform ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -82,9 +81,8 @@ function Header() {
                 <li key={idx} className="items-center">
                   <Link
                     to={item.path}
-                    className={`px-2 pb-5 transition-all duration-300 hover:border-b-2 hover:border-gray-300 ${
-                      location.pathname === item.path ? 'border-b-2 border-[#14cbe3] text-[#14cbe3] font-semibold' : ''
-                    }`}
+                    className={`px-2 pb-5 transition-all duration-300 hover:border-b-2 hover:border-gray-300 ${location.pathname === item.path ? 'border-b-2 border-[#14cbe3] text-[#14cbe3] font-semibold' : ''
+                      }`}
                   >
                     {item.title}
                   </Link>
@@ -93,23 +91,28 @@ function Header() {
             ))}
           </ul>
           <div className="flex gap-x-6 items-center mt-6 md:mt-0 md:ml-0 ml-4">
-            
-            {isAuthenticated? (
-              <><Avatar /> <Notification size={25} /></>
-              ):(
-                ""
-              )}
-            
-            <Link to="/login" className="text-black font-medium uppercase block">
-              Log in
-            </Link>
-            <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-[#14cbe3] text-white shadow-inner shadow-[#007c87] hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
-              Sign Up
-            </button>
+
+            {isAuthenticated ? (
+              <>
+                <Notification size={25} />
+                <Avatar />
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="text-black font-medium uppercase block">
+                  Log in
+                </Link>
+                <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-[#14cbe3] text-white shadow-inner shadow-[#007c87] hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
+                  Sign Up
+                </button>
+              </>
+            )}
+
+
           </div>
         </div>
       </div>
-    </nav>
+    </nav >
   );
 }
 

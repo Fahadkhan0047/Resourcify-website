@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Card,
   Typography,
@@ -13,10 +13,10 @@ import {
   Alert,
   Input,
 } from "@material-tailwind/react";
-import {FaMessage} from "react-icons/fa6";
+import { FaMessage } from "react-icons/fa6";
 import { FiLogOut } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
-import { MdDashboard,} from "react-icons/md";
+import { MdDashboard, } from "react-icons/md";
 import {
   ChevronRightIcon,
   ChevronDownIcon,
@@ -26,6 +26,8 @@ import {
 export default function SidebarWithSearch() {
   const [open, setOpen] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState(true);
+  const [isAuthenticated, setAuthenticated] = useState(false)
+
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
@@ -45,9 +47,8 @@ export default function SidebarWithSearch() {
           icon={
             <ChevronDownIcon
               strokeWidth={2.5}
-              className={`mx-auto h-4 w-4 text-[#14cbe3] transition-transform ${
-                open === 1 ? "rotate-180" : ""
-              }`}
+              className={`mx-auto h-4 w-4 text-[#14cbe3] transition-transform ${open === 1 ? "rotate-180" : ""
+                }`}
             />
           }
         >
@@ -103,18 +104,24 @@ export default function SidebarWithSearch() {
             />
           </ListItemSuffix>
         </ListItem>
-        <ListItem>
-          <ListItemPrefix>
-            <CgProfile className="h-6 w-6 text-[#14cbe3]" />
-          </ListItemPrefix>
-          Profile
-        </ListItem>
-        <ListItem>
-          <ListItemPrefix>
-            <FiLogOut className="h-5 w-5 text-red-500" />
-          </ListItemPrefix>
-          <span className="text-red-500">Log Out</span>
-        </ListItem>
+        {isAuthenticated ? (
+          <>
+            <ListItem>
+              <ListItemPrefix>
+                <CgProfile className="h-6 w-6 text-[#14cbe3]" />
+              </ListItemPrefix>
+              Profile
+            </ListItem>
+            <ListItem>
+              <ListItemPrefix>
+                <FiLogOut className="h-5 w-5 text-red-500" />
+              </ListItemPrefix>
+              <span className="text-red-500">Log Out</span>
+            </ListItem>
+          </>
+        ) : (
+          ""
+        )}
       </List>
     </Card>
   );

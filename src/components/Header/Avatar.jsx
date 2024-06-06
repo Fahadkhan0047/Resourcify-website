@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Avatar } from "@material-tailwind/react";
 import { RxAvatar } from "react-icons/rx";
 import { MdLogout } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Image from '../../assets/avatar.png'
+
 
 export default function AvatarDefault() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,9 +34,8 @@ export default function AvatarDefault() {
   return (
     <div className="relative" ref={dropdownContainerRef}>
       <div
-        className={`absolute top-0 left-0 w-48 p-2 mt-16 bg-white text-black rounded-lg shadow-lg transition-all duration-300 ${
-          isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
-        }`}
+        className={`absolute top-0 -left-36 w-48 p-2 mt-16 bg-white text-black rounded-lg shadow-lg transition-all duration-300 ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+          }`}
         ref={dropdownRef}
       >
         <div className="flex flex-col">
@@ -54,12 +54,11 @@ export default function AvatarDefault() {
           </div>
         </div>
       </div>
-      <Avatar
-        src="https://docs.material-tailwind.com/img/face-2.jpg"
+      <img
+        src={Image}
         alt="avatar"
         onClick={toggleDropdown}
-        className="cursor-pointer"
-      />
+        className="h-11 w-11 rounded-full cursor-pointer" />
     </div>
   );
 }
