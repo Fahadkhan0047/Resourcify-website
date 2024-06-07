@@ -20,7 +20,7 @@ const YourProfile = () => {
         setAboutText(e.target.value);
     };
     return (
-        <div className='h-screen'>
+        <div className='h-screen w-full bg-[#edf6f9] pl-0 md:pt-16 lg:pl-72'>
             <div className=' flex justify-center mt-8 mx-8 h-40 p-2 rounded-md bg-gradient-to-r from-yellow-200 to-purple-200'>
                 <div className="translate-y-20 border-4 border-blue-gray-300 sm:absolute sm:top-24 sm:left-[360px] h-32 w-32 rounded-full overflow-hidden">
                     <img className="h-full w-full object-cover" src={Prof} alt="" />

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 function Login() {
 
   return (
@@ -13,7 +15,7 @@ function Login() {
           <label className="mr-1">Sign in with</label>
           <button
             type="button"
-            className="mx-1 h-9 w-9 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-[0_4px_9px_-4px_#3b71ca]">
+            className="mx-1 h-9 w-9 rounded-full bg-[#14cbe3] hover:bg-[#4beaff] text-white shadow-[0_4px_9px_-4px_#3b71ca]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="mx-auto h-3.5 w-3.5"
@@ -25,7 +27,7 @@ function Login() {
           </button>
           <button
             type="button"
-            className="inlne-block mx-1 h-9 w-9 rounded-full bg-blue-600 hover:bg-blue-700 uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca]">
+            className="inlne-block mx-1 h-9 w-9 rounded-full bg-[#14cbe3] hover:bg-[#4beaff] uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="mx-auto h-3.5 w-3.5"
@@ -46,13 +48,22 @@ function Login() {
             <input className="mr-1" type="checkbox" />
             <span>Remember Me</span>
           </label>
-          <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>
+          <a className="text-[#14cbe3] hover:text-[#4beaff] hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>
         </div>
         <div className="text-center md:text-left">
-          <button className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Login</button>
+          <Button
+           sx={{
+            backgroundColor: '#14cbe3',
+            '&:hover': {
+              backgroundColor: '#24a7b8',
+              
+            },
+            marginTop:'3rem',
+          }} variant="contained">Contained</Button>
+
         </div>
-        <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
-          Don't have an account? <a className="text-red-600 hover:underline hover:underline-offset-4" href="#">Register</a>
+        <div className=" flex mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
+          Don't have an account ? <Link to="/Signup" className="block ml-2 text-[#14cbe3] duration-300 hover:text-[#4beaff]">register</Link>
         </div>
       </div>
     </section>

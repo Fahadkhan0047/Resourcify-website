@@ -179,7 +179,7 @@ function Header() {
               )
             )}
           </ul>
-          <div className="mt-4 flex md:mt-0 md:ml-4 items-center border-gray-300 border-l">
+          <div className="mt-4 flex md:mt-0 md:ml-4 items-center border-gray-300">
             {isAuthenticated ? (
               <div className="flex items-center space-x-4 pl-4">
                 <Notification />
@@ -187,8 +187,8 @@ function Header() {
               </div>
             ) : (
               <>
-                <Link to="/SignIn" className="block text-gray-700 hover:text-[#14cbe3]">Sign In</Link>
-                <Link to="/SignUp" className="block px-5 py-2 text-white bg-[#14cbe3] hover:bg-transparent hover:text-[#14cbe3] border border-[#14cbe3] rounded-md transition duration-300">Sign Up</Link>
+                <Link to="/login" className="block mx-4 border-none text-gray-700  hover:text-[#14cbe3]">Sign In</Link>
+                <Link to="/Signup" className="block px-5 py-2 text-white bg-[#14cbe3] hover:bg-transparent hover:text-[#14cbe3] border border-[#14cbe3] rounded-md transition duration-300">Sign Up</Link>
               </>
             )}
           </div>

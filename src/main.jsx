@@ -4,7 +4,6 @@ import App from "./App.jsx";
 import "./index.css";
 import { Theme } from "@radix-ui/themes";
 import Home from "./pages/Home.jsx";
-import SignUp from "./pages/SignUpForm.jsx";
 import { BrowserRouter } from 'react-router-dom';
 
 

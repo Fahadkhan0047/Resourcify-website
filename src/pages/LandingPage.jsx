@@ -24,7 +24,7 @@ const LandingPage = () => {
   };
 
   const handleSignUpClick = () => {
-    navigate('/signup'); // Navigate to the signup page
+    navigate('/Signup'); // Navigate to the signup page
   };
 
   return (

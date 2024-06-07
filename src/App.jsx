@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/Authentication/Login";
+import Signup from "./components/Authentication/Signup";
 import { Route, Routes, useLocation } from "react-router-dom";
 import YourProfile from "./pages/YourProfile";
 import Roadmap from "./pages/Roadmap";
@@ -18,7 +19,7 @@ function App() {
   return (
     <>
       <Header />
-      {location.pathname !== "/" && <SideBar />}
+      {(location.pathname !== "/" && location.pathname !== "/login" && location.pathname !== "/Signup") && <SideBar />}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/Home" element={<Home />} />
@@ -27,6 +28,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Resources" element={<Resources />} />
+        <Route path="/Signup" element={<Signup />} />
       </Routes>
       <Footer />
     </>
