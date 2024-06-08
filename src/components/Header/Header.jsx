@@ -128,7 +128,7 @@ function Header() {
 
   const renderDropdownItems = (item, idx) => (
     <li key={idx} className="relative group" onMouseEnter={() => handleMouseEnter(idx)} onMouseLeave={handleMouseLeave}>
-      <Link to={item.path} className={`px-2 py-1 rounded transition-all duration-300 flex items-center hover:border-b-2 hover:border-gray-300 ${location.pathname === item.path ? 'border-b-2 border-[#14cbe3]' : ''}`}>
+      <Link to={item.path} className={`px-2 py-4 transition-all duration-300 flex items-center hover:border-b-2 hover:border-gray-300 ${location.pathname === item.path ? 'border-b-2 border-[#14cbe3]' : ''}`}>
         {item.title}
         <svg className={`ml-2 h-4 w-4 transition-transform ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
