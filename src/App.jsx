@@ -4,7 +4,7 @@ import "@radix-ui/themes/styles.css";
 import Home from "./pages/Home";
 import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
-import Login from "./components/Authentication/Login";
+import Login from "./pages/Login";
 import Signup from "./components/Authentication/Signup";
 import { Route, Routes, useLocation } from "react-router-dom";
 import YourProfile from "./pages/YourProfile";
