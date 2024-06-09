@@ -6,7 +6,6 @@ const path = require("path");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const { body, validationResult } = require('express-validator');
-const { error } = require("console");
 
 require('dotenv').config();
 
