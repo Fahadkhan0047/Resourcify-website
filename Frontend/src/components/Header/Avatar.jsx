@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { RxAvatar } from "react-icons/rx";
 import { MdLogout } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Image from '../../assets/avatar.png'
 
 
@@ -9,6 +9,26 @@ export default function AvatarDefault() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const dropdownContainerRef = useRef(null);
+  const [token, setToken] = useState(null);
+  
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tokenFromUrl = params.get('token');
+    if (tokenFromUrl) {
+      setToken(tokenFromUrl);
+      // Optionally, you can store the token in localStorage for persistence
+      localStorage.setItem('authToken', tokenFromUrl);
+    } else {
+      // Check if there's a token in localStorage
+      const storedToken = localStorage.getItem('authToken');
+      const storedToken1 = localStorage.getItem('token');
+      if (storedToken || storedToken1) {
+        setToken(storedToken);
+      }
+    }
+  }, [location]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -18,6 +38,14 @@ export default function AvatarDefault() {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsOpen(false);
     }
+  };
+
+  const handleLogout = () => {
+    // Clear the token and update the state
+    navigate('/Home')
+    navigate(0)
+    setToken();
+    localStorage.removeItem('authToken');
   };
 
   useEffect(() => {
@@ -46,9 +74,9 @@ export default function AvatarDefault() {
             </Link>
           </div>
           <hr className="my-1" />
-          <div className="flex items-center gap-2 cursor-pointer text-red-500 active:scale-95 duration-300 hover:bg-gray-200 p-2 rounded-2xl">
+          <div className="flex items-center gap-2 cursor-pointer text-red-500 active:scale-95 duration-300 hover:bg-gray-200 p-2 rounded-2xl" onClick={handleLogout}>
             <MdLogout size={25} />
-            <button className="text-md" onClick={handleButtonClick}>
+            <button className="text-md" >
               Logout
             </button>
           </div>

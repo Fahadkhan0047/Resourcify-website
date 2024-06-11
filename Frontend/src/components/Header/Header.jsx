@@ -12,43 +12,76 @@ function Header() {
   const [isNestedDropdownOpen, setIsNestedDropdownOpen] = useState({});
   const location = useLocation();
   const [isAuthenticated, setAuthenticated] = useState(false);
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tokenFromUrl = params.get('token');
+    if (tokenFromUrl) {
+      setToken(tokenFromUrl);
+      setAuthenticated(true);
+      // Optionally, you can store the token in localStorage for persistence
+      localStorage.setItem('authToken', tokenFromUrl);
+    } else {
+      // Check if there's a token in localStorage
+      const storedToken = localStorage.getItem('authToken');
+      const storedToken1 = localStorage.getItem('token');
+      if (storedToken || storedToken1) {
+        setToken(storedToken);
+        setAuthenticated(true);
+      }
+    }
+  }, [location]);
+
+  const handleLogout = () => {
+    // Clear the token and update the state
+    setToken(null);
+    setAuthenticated(false);
+    localStorage.removeItem('authToken');
+  };
 
   const navigation = [
     { title: "Home", path: "/Home" },
     { title: "Roadmap", path: "/Roadmap" },
     {
       title: "Categories", path: "/Categories", subItems: [
-        { title: "CSE", subLinks: [
+        {
+          title: "CSE", subLinks: [
             { title: "Development", nestedLinks: ["Frontend", "Backend", "Fullstack"] },
             { title: "DSA", nestedLinks: ["Algorithms", "Data Structures"] },
             { title: "Data Science", nestedLinks: ["Machine Learning", "Statistics"] },
           ]
         },
-        { title: "ECE", subLinks: [
+        {
+          title: "ECE", subLinks: [
             { title: "ECE Sub 1", nestedLinks: ["Signal Processing", "VLSI"] },
             { title: "ECE Sub 2", nestedLinks: ["Communications", "Embedded Systems"] },
             { title: "ECE Sub 3", nestedLinks: ["Control Systems", "Robotics"] },
           ]
         },
-        { title: "ME", subLinks: [
+        {
+          title: "ME", subLinks: [
             { title: "ME Sub 1", nestedLinks: ["Thermodynamics", "Fluid Mechanics"] },
             { title: "ME Sub 2", nestedLinks: ["Mechanics", "Design"] },
             { title: "ME Sub 3", nestedLinks: ["Manufacturing", "Materials"] },
           ]
         },
-        { title: "CE", subLinks: [
+        {
+          title: "CE", subLinks: [
             { title: "CE Sub 1", nestedLinks: ["Structural", "Geotechnical"] },
             { title: "CE Sub 2", nestedLinks: ["Environmental", "Transportation"] },
             { title: "CE Sub 3", nestedLinks: ["Water Resources", "Construction"] },
           ]
         },
-        { title: "EEE", subLinks: [
+        {
+          title: "EEE", subLinks: [
             { title: "EEE Sub 1", nestedLinks: ["Power Systems", "Control"] },
             { title: "EEE Sub 2", nestedLinks: ["Electronics", "Instrumentation"] },
             { title: "EEE Sub 3", nestedLinks: ["Electrical Machines", "Energy"] },
           ]
         },
-        { title: "BCA", subLinks: [
+        {
+          title: "BCA", subLinks: [
             { title: "BCA Sub 1", nestedLinks: ["Programming", "Database"] },
             { title: "BCA Sub 2", nestedLinks: ["Networks", "Web Development"] },
             { title: "BCA Sub 3", nestedLinks: ["Cyber Security", "Software Engineering"] },
