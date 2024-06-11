@@ -1,17 +1,37 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { Button } from "@mui/material";
-import Input from './Input'
-
+import Input from './Input';
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const [message, setMessage] = useState('');
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const url = isLogin ? 'http://localhost:4000/login' : 'http://localhost:4000/signup';
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json();
+      if (result.success) {
+        setMessage('Success');
+        // Optionally, you can store the token in localStorage and redirect the user
+        localStorage.setItem('token', result.token);
+        window.location.href = '/home';
+      } else {
+        setMessage(result.errors || 'Something went wrong');
+      }
+    } catch (error) {
+      setMessage('An error occurred');
+    }
   };
+
   return (
     <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
       <div className="md:w-1/3 max-w-sm">
@@ -32,8 +52,8 @@ const Login = () => {
 
         {isLogin ? (
           <>
-            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded" type="text" placeholder="Email Address" />
-            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4" type="password" placeholder="Password" />
+            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded" type="text" placeholder="Email Address" {...register("email", { required: true })} />
+            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4" type="password" placeholder="Password" {...register("password", { required: true })} />
             <div className="mt-4 flex justify-between font-semibold text-sm">
               <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
                 <input className="mr-1" type="checkbox" />
@@ -49,7 +69,7 @@ const Login = () => {
                     backgroundColor: '#24a7b8',
                   },
                   marginTop: '3rem',
-                }} variant="contained">LogIn</Button>
+                }} variant="contained" onClick={handleSubmit(onSubmit)}>LogIn</Button>
             </div>
             <div className="flex mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
               Don't have an account ? <span onClick={() => setIsLogin(false)} className="block ml-2 text-[#14cbe3] duration-300 hover:text-[#4beaff] cursor-pointer">Register</span>
@@ -95,16 +115,17 @@ const Login = () => {
                     backgroundColor: '#24a7b8',
                   },
                   marginTop: '3rem',
-                }} variant="contained">Register</Button>
+                }} variant="contained" type="submit">Register</Button>
             </div>
             <div className="flex mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
               Already have an account ? <span onClick={() => setIsLogin(true)} className="block ml-2 text-[#14cbe3] duration-300 hover:text-[#4beaff] cursor-pointer">Login</span>
             </div>
           </form>
         )}
+        {message && <p className="mt-4 text-center text-red-500">{message}</p>}
       </div>
     </section>
   )
 }
 
-export default Login
+export default Login;
