@@ -1,9 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import img2 from "../../assets/img2.png";
 import img from "../../assets/img.webp";
 import img3 from "../../assets/img3.jpg";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { Button } from "@material-tailwind/react";
 
 const HeroSectionMain = () => {
   const containerRef = useRef(null);
@@ -39,175 +38,22 @@ const HeroSectionMain = () => {
                   Explore all Resources
                 </a>
               </div>
-              <div className="mt-8 lg:mt-12">
-                <svg
-                  className="w-auto h-4 mx-auto text-gray-300 lg:mx-0"
-                  viewBox="0 0 172 16"
-                  fill="none"
-                  stroke="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)"
-                  ></line>
-                  <line
-                    y1="-0.5"
-                    x2="18.0278"
-                    y2="-0.5"
-                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)"
-                  ></line>
-                </svg>
-              </div>
+
             </div>
 
             <div className="relative mt-12 lg:mt-0 lg:absolute lg:-translate-y-1/2 lg:translate-x-[450px] lg:top-1/2 w-auto lg:w-auto">
-            <button
+              <button
                 className="sm:hidden absolute left-0 z-10 px-4 py-2 mt-36 text-white bg-gray-900 rounded-full outline-none ring-2 ring-offset-1 ring-gray-900"
                 onClick={() => scrollCards('left')}
               >
-                <FaChevronLeft/>
+                <FaChevronLeft />
               </button>
-             
+
               <button
                 className="sm:hidden absolute right-0 z-10 px-4 py-2 mt-36 text-white bg-gray-900 rounded-full focus:outline-none ring-2 ring-offset-1 ring-gray-900"
                 onClick={() => scrollCards('right')}
               >
-                <FaChevronRight/>
+                <FaChevronRight />
               </button>
               <div ref={containerRef} className="relative w-full overflow-x-auto lg:overflow-visible">
                 <div className="flex gap-4 flex-nowrap w-full lg:w-auto">

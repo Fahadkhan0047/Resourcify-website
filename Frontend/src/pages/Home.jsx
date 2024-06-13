@@ -8,8 +8,6 @@ import Jobs from "../components/Jobs/Jobs";
 import CallToAction from "../components/CallToAction";
 import FreeResources from "../components/FreeResources/FreeResources";
 
-import Branch from "../components/Branch/Branch";
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -25,14 +23,13 @@ function Home() {
     <>
       <div className="w-full bg-[#edf6f9] pl-0 md:pt-16 lg:pl-72">
         <HeroSectionMain />
-        <Branch />
         <div className="mx-10 pt-16">
           <h1 className="text-2xl mb-8 font-bold text-gray-900 half-underline sm:text-2xl lg:leading-tight xl:text-2xl sm:text-left text-center">
             Top Categories
           </h1>
           <Swiper
             spaceBetween={50}
-            slidesPerView={1}
+            slidesPerView={4}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >
