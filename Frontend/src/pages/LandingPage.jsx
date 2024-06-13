@@ -1,10 +1,7 @@
-import { useState } from 'react';
+import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom'; // Import useNavigate and useLocation from react-router-dom
-import { RiEyeCloseFill } from "react-icons/ri";
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
-import Logo from '../assets/ResourcifyLogo.png';
 import VantaGlobe from '../components/Backgrounds/VantaGlobe';
-import Login from '../components/Authentication/Login';
 
 const LandingPage = () => {
   const words = [
@@ -38,13 +35,13 @@ const LandingPage = () => {
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
           <button
             className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm"
-            onClick={handleLoginClick} // Corrected onClick
+            onClick={handleLoginClick} 
           >
             LogIn
           </button>
           <button
             className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm"
-            onClick={handleSignUpClick} // Corrected onClick
+            onClick={handleSignUpClick}
           >
             SignUp
           </button>

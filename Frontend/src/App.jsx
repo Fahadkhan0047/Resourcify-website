@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
 import Login from "./pages/Login";
-import Signup from "./components/Authentication/Signup";
 import { Route, Routes, useLocation } from "react-router-dom";
 import YourProfile from "./pages/YourProfile";
 import Roadmap from "./pages/Roadmap";
@@ -28,7 +27,6 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Resources" element={<Resources />} />
-        <Route path="/Signup" element={<Signup />} />
       </Routes>
       <Footer />
     </>

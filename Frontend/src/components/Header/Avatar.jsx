@@ -46,6 +46,7 @@ export default function AvatarDefault() {
     navigate(0)
     setToken();
     localStorage.removeItem('authToken');
+    localStorage.removeItem('token');
   };
 
   useEffect(() => {

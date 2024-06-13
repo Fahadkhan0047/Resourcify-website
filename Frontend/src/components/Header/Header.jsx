@@ -221,7 +221,7 @@ function Header() {
             ) : (
               <>
                 <Link to="/login" className="block mx-4 border-none text-gray-700  hover:text-[#14cbe3]">Sign In</Link>
-                <Link to="/Signup" className="block px-5 py-2 text-white bg-[#14cbe3] hover:bg-transparent hover:text-[#14cbe3] border border-[#14cbe3] rounded-md transition duration-300">Sign Up</Link>
+                <Link to="/login" className="block px-5 py-2 text-white bg-[#14cbe3] hover:bg-transparent hover:text-[#14cbe3] border border-[#14cbe3] rounded-md transition duration-300">Sign Up</Link>
               </>
             )}
           </div>

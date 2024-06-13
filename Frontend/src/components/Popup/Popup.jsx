@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; // Import useLocation from react-router-dom
 import { RiEyeCloseFill } from "react-icons/ri";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
-import AuthPopup from '../Authentication/AuthPopup';
 
 const Popup = () => {
   const words = [
