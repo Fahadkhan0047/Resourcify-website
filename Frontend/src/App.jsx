@@ -12,6 +12,7 @@ import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 import LandingPage from "./pages/LandingPage";
 import Resources from "./pages/Resources";
+import FullStack from "./pages/Roadmaps/FullStack";
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Resources" element={<Resources />} />
+        <Route path="/Roadmap/FullStack" element={<FullStack />} />
       </Routes>
       <Footer />
     </>

@@ -1,7 +1,10 @@
 import React from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
+
 
 function RoadmapCard({ title, description }) {
+  const navigate = useNavigate()
   return (
     <>
 
@@ -15,7 +18,7 @@ function RoadmapCard({ title, description }) {
         </div>
 
         <div className="bg-gray-100 h-12 flex items-center rounded-b-xl">
-          <a href="#" className="w-full p-4 text-[#14cbe3] hover:translate-x-3 transition-all duration-300 flex items-center gap-3 hover:text-[#3cb1c1]">
+          <a onClick={()=>navigate(`/Roadmap/${title}`)} className="w-full p-4 text-[#14cbe3] hover:translate-x-3 transition-all duration-300 flex items-center gap-3 hover:text-[#3cb1c1]">
             Start Learning <HiOutlineArrowNarrowRight />
           </a>
         </div>

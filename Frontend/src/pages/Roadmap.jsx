@@ -1,18 +1,22 @@
 import React from 'react'
 import RoadmapCard from '../components/Card/RoadmapCard'
+import { useNavigate } from 'react-router-dom'
 
 function Roadmap() {
+
+    const navigate = useNavigate()
+
     const Roadmapcarddata = [
         {
             title: 'Full Stack Roadmap',
             description: 'The best way to learn full stack development with hands-on labs, practical projects, and community -...'
         },
         {
-            title: 'Full Stack Roadmap',
+            title: 'Backend Roadmap',
             description: 'The best way to learn full stack development with hands-on labs, practical projects, and community -...'
         },
         {
-            title: 'Full Stack Roadmap',
+            title: 'Frontend Roadmap',
             description: 'The best way to learn full stack development with hands-on labs, practical projects, and community -...'
         },
         {
